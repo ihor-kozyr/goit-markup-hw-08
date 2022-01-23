@@ -73,10 +73,11 @@
 .projects__item {
   margin-left: 30px;
   margin-top: 30px;
+  flex-basis: calc((100% - 90px) / 3);
 
   &:hover .project__text {
     transform: translateY(-100%);
-
+    opacity: 1;
     width: 370px;
     height: 294px;
 
@@ -86,37 +87,22 @@
     background: rgba(33, 150, 243, 0.9);
     color: var(--primary-white-color);
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: calc((100% - 2 * 30px) / 2);
-  }
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 90px) / 3);
-  }
-  &:nth-child(3n + 1) {
-    @media screen and (min-width: 1200px) {
-      margin-left: -30px;
-    }
-  }
 }
 
 .projects__item-description {
-  padding: 20px 24px;
-  border-top: 0;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px 25px;
 }
 
 .projects__item-description p,
 h2 {
   margin: 0;
-  white-space: nowrap;
 }
 
 .project__text {
   transform: translateY(0%);
-  opacity: 0;
+  opacity: 1;
 
   font-family: Roboto;
   font-style: normal;
@@ -136,28 +122,23 @@ h2 {
 
   pointer-events: none;
 
-  @extend %animation;
-
-  position: absolute;
- 
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.555;
-  letter-spacing: 0.03em;
-  height: 100%;
-  width: 100%;
-
-  color: $color-main;
-  display: block;
-  padding: 64px 24px;
-  position: absolute;
-  top: 0;
-  background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-  transform: translateY(100%);
-   transition-property: all;
+  transition-property: all;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  .links:focus &,  .links:hover & {    opacity: 1;
-    transform: translateY(0);}
+  position: absolute;
+}
+
+.projects__item-description {
+  padding: 20px 24px;
+  border-top: 0;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.projects__item-description p,
+h2 {
+  margin: 0;
+  white-space: nowrap;
+}
