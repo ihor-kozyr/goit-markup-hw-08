@@ -1,0 +1,73 @@
+/*SVG*/
+
+.link-icon {
+  fill: var(--secondary-text-color);
+  margin-right: 10px;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.social-centr {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.client-icon {
+  border: 0;
+}
+
+.button-client {
+  width: 170px;
+  height: 92px;
+
+  cursor: pointer;
+  /*color: var(--secondary-text-color);*/
+  font-family: inherit;
+  display: inline-block;
+
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: var(--primary-white-color);
+
+  @extend %animation;
+}
+.client-icon-button {
+  display: flexbox;
+  justify-content: center; /* центируем по оси х*/
+  align-items: center; /* центируем по оси у*/
+
+  fill: #afb1b8;
+
+  max-width: 106px;
+  max-height: 60px;
+  min-height: 60px;
+  min-width: 106px;
+
+  @extend %animation;
+}
+
+.client-icon-button:hover,
+.client-icon-button:focus,
+.button-client:hover,
+.button-client:focus {
+  fill: var(--accent-color);
+  @extend %animation;
+}
+
+.button-client:hover,
+.button-client:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.button-client:focus .client-icon-button {
+  fill: var(--accent-color);
+}
+.button-client:hover .client-icon-button {
+  fill: var(--accent-color);
+}
+/*SVG  END*/

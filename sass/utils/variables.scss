@@ -1,0 +1,74 @@
+:root {
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --title-text-color: #212121;
+  --secondary-background-color: #2f303a;
+  --special-background-color: #f5f4fa;
+}
+
+$color-text: #757575;
+$color-title: #212121;
+$color-accent: #2196f3;
+$color-main: #ffffff;
+$color-footer: #2f303a;
+$color-background: #f5f4fa;
+$partners-color: #afb1b8;
+$time-hover: 250ms;
+$cubic-for-all: cubic-bezier(0.4, 0, 0.2, 1);
+$main-font-family: "Roboto", sans-serif;
+$logo-font-family: "Raleway", sans-serif;
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+  letter-spacing: 0.03em;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+//Убирает лишние отступы у картинок снизу + добавляет отзывчивость
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+*li {
+  list-style-type: none; /* Убираем маркеры */
+}
+
+// Уменьшает почти до нуля
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

@@ -1,0 +1,39 @@
+//Header logo
+.top-logo {
+  @extend %text-stail-logo;
+  margin: 0 93px 0 0;
+  padding: 25px 0 25px 0;
+
+  & .accent {
+    color: var(--accent-color);
+  }
+}
+
+//Footer logo
+.footer__logo {
+  @extend %text-stail-logo;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  & .accent {
+    color: var(--accent-color);
+  }
+
+  & .second-part {
+    color: var(--primary-white-color);
+  }
+}
+.top-logo {
+  color: var(--title-text-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.17;
+  text-decoration: none;
+  margin: 0 95px 0 0;
+  padding: 25px 0 25px 0;
+
+  & .accent {
+    color: var(--accent-color);
+  }
+}

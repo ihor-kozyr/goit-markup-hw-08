@@ -1,0 +1,116 @@
+/* ============== FOOTER ============== */
+.footer {
+  background-color: var(--secondary-background-color);
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo {
+  color: var(--title-text-color);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.17;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer__logo .accent {
+  color: var(--accent-color);
+}
+.footer__logo .second-part {
+  color: var(--primary-white-color);
+}
+
+/* ============== CONTACT INFORMATION ============== */
+.address {
+  color: var(--primary-white-color);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address .button:hover, .address .button:focus {
+  color: var(--accent-color);
+}
+
+.address .button {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.footer__address {
+  margin-bottom: 9px;
+}
+
+/* ============== END CONTACT INFORMATION ============== */
+/*subscribe*/
+.form-input-box-footer {
+  width: 358px;
+  height: 50px;
+}
+
+.form-input-footer {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #2f303a;
+  color: var(--primary-white-color);
+}
+
+.btn-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-white-color);
+  width: 200px;
+  height: 50px;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border: 0;
+}
+.btn-subscribe:hover, .btn-subscribe:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+  --color2: var(--accent-color);
+}
+
+.button-post {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  color: #000;
+}
+
+.subscription-box-general {
+  padding-left: 94px;
+}
+
+.subscription-box {
+  display: flex;
+}
+
+.btn-submit-box {
+  padding-left: 12px;
+}
+
+/*END subscribe*/
+/* ============== END FOOTER ============== *//*# sourceMappingURL=_footer.css.map */
