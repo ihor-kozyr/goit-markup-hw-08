@@ -1,0 +1,51 @@
+/* ============== SECTION ============== */
+.section {
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    //padding-top: 94px;
+    //padding-bottom: 94px;
+    padding: 94px 0;
+  }
+}
+
+.section .title,
+.section-special-first .title {
+  color: var(--title-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.title {
+  padding-top: 30px;
+}
+
+.section-special-first {
+  padding: 60px 0 0 0;
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    padding: 94px 0 0 0;
+  }
+}
+
+.section-special-second {
+  
+
+  @media screen and (max-width: 767px) {
+  display: none;  
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+/* ============== END SECTION ============== */

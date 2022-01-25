@@ -1,0 +1,346 @@
+/************MODAL WINDOW**************/
+/* backdrop*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  @extend %animation;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  @extend %animation;
+}
+/* modal */
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+  overflow: auto;
+  opacity: 1;
+  @extend %animation;
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 767px) {
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
+.modal-close {
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  fill: black;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  @extend %animation;
+}
+
+.form-box {
+  padding-top: 12px;
+  @extend %animation;
+}
+
+.close-icon {
+  width: 11px;
+  height: 11px;
+  --color3: #000;
+  @extend %animation;
+}
+.modal-close:hover .close-icon {
+  --color3: var(--accent-color);
+  @extend %animation;
+}
+
+.modal-headline {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  /*
+
+*/
+  color: #212121;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 40px;
+    padding-left: 41px;
+    padding-right: 39px;
+  }
+}
+
+.form-input-box {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  position: relative;
+  @extend %animation;
+}
+.form-input-box-coment {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  position: relative;
+  @extend %animation;
+}
+
+.form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+
+  padding: 0 15px 0 42px;
+  outline: none;
+
+  @extend %animation;
+
+  &:hover {
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &:focus {
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &:active {
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.form-message {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  outline: none;
+
+  &:hover {
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &:focus {
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &:active {
+    border: 1px solid var(--accent-color);
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.form-input-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  @extend %animation;
+}
+
+.form-input:focus ~ .form-input-icon {
+  --color1: var(--accent-color);
+  --color1: var(--accent-color);
+}
+.form-input:hover ~ .form-input-icon {
+  --color1: var(--accent-color);
+}
+
+.modal-btn {
+  width: 200px;
+  height: 50px;
+  border: 0;
+
+  background: #188ce8;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: center;
+  @extend %animation;
+}
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @extend %animation;
+}
+.modal-btn:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+  border: 1px solid var(--accent-color);
+  @extend %animation;
+}
+.modal-btn:hover {
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+  border: 1px solid var(--accent-color);
+  @extend %animation;
+}
+
+.modal-btn-box {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  @extend %animation;
+}
+
+/* Option */
+
+.option {
+  display: flexbox;
+  text-align: center;
+
+  @extend %animation;
+}
+
+/* Check */
+
+.check {
+  display: flex;
+  align-items: center;
+  max-width: 425px;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1.2em;
+  font-family: Roboto;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color);
+  @extend %animation;
+  & a {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+}
+
+.check__input {
+  /*position: absolute;
+-webkit-appearance: none;
+ -moz-appearance: none;
+appearance: none;*/
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  @extend %animation;
+}
+
+.check__box {
+  position: absolute;
+  /**/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+  height: 15px;
+  margin-left: -20px;
+  background-image: url(/images/33/Vector.svg);
+  @extend %animation;
+}
+
+.check-text {
+  margin: 2px;
+  /*display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 0;*/
+}
+/* Checked */
+
+.check__input:checked + .check__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+
+  object-fit: cover;
+
+  background-repeat: no-repeat;
+  background-color: var(--accent-color);
+
+  background-image: url(/images/33/icon-check.svg);
+  @extend %animation;
+}
+
+/************END MODAL WINDOW**************/

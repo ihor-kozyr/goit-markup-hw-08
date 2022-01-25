@@ -1,0 +1,136 @@
+/* ============== EMPLOYEES ============== */
+.employees {
+  background-color: var(--special-background-color);
+  text-align: center;
+  background: var(--special-background-color);
+}
+
+.employees-list {
+  /* margin: 0; */
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @extend %list;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+
+.employees-list__item {
+  background-color: var(--primary-white-color);
+  margin: 0;
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 30px;
+  /*flex-basis: calc((100% - 120px) / 4);*/
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  & h3 {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0 auto 10px auto;
+  }
+
+  & p {
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+.employees-item__description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.employees-item__social {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 10px;
+  --color2: #afb1b8;
+  @extend %animation;
+
+  &:focus,
+  &:hover {
+    --color1: black;
+    background-color: var(--accent-color);
+    --color2: var(--primary-white-color);
+    width: 44px;
+    height: 44px;
+  }
+
+  &:focus {
+    background-color: var(--accent-color);
+    --color2: var(--primary-white-color);
+  }
+  &:hover {
+    background-color: var(--accent-color);
+    --color2: var(--primary-white-color);
+  }
+}
+
+.employees-item__links {
+  display: flex;
+  margin: auto;
+
+  width: 20px;
+  height: 20px;
+  --color1: none;
+
+  @extend %animation;
+}
+
+.social-button__footer {
+  display: flex;
+  /*display: block;*/
+  background: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  margin-right: 10px;
+  fill: var(--primary-white-color);
+
+  @extend %animation;
+
+  &:focus {
+    background-color: var(--accent-color);
+    --color2: var(--primary-white-color);
+  }
+  &:hover {
+    background-color: var(--accent-color);
+    --color2: var(--primary-white-color);
+  }
+}
+
+.social-button__links {
+  display: flex;
+  margin: auto;
+
+  width: 20px;
+  height: 20px;
+  --color1: none;
+}
+
+/* ============== END EMPLOYEES ============== */
